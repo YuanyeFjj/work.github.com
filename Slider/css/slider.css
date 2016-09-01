@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+
+.slider {
+	width:800px;
+	height:300px;
+	margin:100px auto;
+	overflow:hidden;
+	position:relative;
+}
+
+/* slider view */
+.slider .view {
+	list-style-type:none;
+/*	width:4000px;
+	height:300px;*/
+	background:#9F6;
+	position:absolute;
+	left:0px;
+	transition:left 1.5s;
+	-moz-transition:left 1.5s;  	/*Firefox 4*/ 
+	-webkit-transition:left 1.5s; 	/*Safari and Chrome*/ 
+	-o-transition:left 1.5s;  		/*Opera*/ 
+	-ms-transition:left 1.5s;  		/*IE*/ 
+}
+.slider .page {
+/*	width:800px;
+	height:300px;*/
+	float:left;
+/*	font-size:100px;
+	line-height:300px;
+	text-align:center;*/
+}
+
+/* slider arrow */
+.slider .arrow {
+	position:absolute;
+	width:50px;
+	height:80px;
+	background:#333;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+	font:bold 45px/80px 'simsun';
+	text-align:center;
+	color:#fff;
+	top:50%;
+	margin-top:-40px;
+	display:none;
+	cursor:pointer;
+}
+.slider .arrow:first-child {
+	left:0;
+}
+.slider .arrow:last-child {
+	right:0;
+}
+.slider .arrow:hover {
+	opacity:0.8;
+	filter:alpha(opacity=80);
+}
+.slider:hover .arrow {
+	display:block;
+}
+.slider .arrow a {
+	text-decoration:none;
+	color:#fff;
+}
+
+/* slider indicator */
+.slider .indicator {
+	list-style-type:none;
+	position:absolute;
+	bottom:5px;
+	left:50%;
+	margin-left:-53px;
+}
+.slider .indicator li {
+	font-size:12px;
+	text-align:center;
+	line-height:18px;
+	margin:0 3px;
+	background:#888;
+	color:#fff;
+	width:9px;
+	height:9px;
+	border:solid 2px #666;
+	border-radius:50%;	
+	float:left;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+	cursor:pointer;
+}
+.slider .indicator li:hover {
+	opacity:0.8;
+	filter:alpha(opacity=80);
+}
+.slider .indicator .current {
+	background:#f00;
+}
